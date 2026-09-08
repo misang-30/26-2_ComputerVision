@@ -291,11 +291,11 @@ $$\frac{1}{i} + \frac{1}{o} = \frac{1}{f}$$
 ![](../img/좌상위좌표계.png)
 
 - (u0, v0)를 이미지 센터 혹은 Pricipal Point 라고 한다.
-![](좌상위좌표계2.png)
+![](../img/좌상위좌표계2.png)
 - K Metrics : 카메라 메트릭스라고 한다. 
 - f, u0,v0은 카메라의 변수이므로 Intrinsic Parameter라고 한다.
 
-
+![](../img/좌상위좌표계3.png)
 ---
 ## 5. Rotation and Translation
 - 이제 World Coordinate에서 적용해보자.
