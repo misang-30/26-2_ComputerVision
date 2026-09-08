@@ -5,7 +5,7 @@
 
 - **카메라 옵스큐라 (Camera Obscura):** 어두운 방이나 상자에 작은 구멍을 뚫어 외부 풍경이 반대로 맺히도록 하는 최초의 카메라 원리입니다.
 
-![](img/옵스큐라.png)
+![](../img/옵스큐라.png)
 
   
 
@@ -95,7 +95,7 @@ $$\frac{1}{i} + \frac{1}{o} = \frac{1}{f}$$
         
 
 
-![](가우시안%20렌즈.png)
+![](../img/가우시안%20렌즈.png)
 
 
 
@@ -109,9 +109,9 @@ $$\frac{1}{i} + \frac{1}{o} = \frac{1}{f}$$
 하지만 렌즈 사용 시 다음과 같은 광학적 문제가 발생합니다:  
 
 - **구면 수차 (Spherical Aberration):** 렌즈의 구면 형태로 인해 빛이 한 점에 모이지 않는 현상 (비구면 렌즈(Non-Spherical Lens)나 다중 렌즈(Multiple Lens)로 보정).
-![](구면수차.png)
-![](비구면.png)
-![](다중렌즈.png)
+![](../img/구면수차.png)
+![](../img/비구면.png)
+![](../img/다중렌즈.png)
 
 
 
@@ -119,30 +119,30 @@ $$\frac{1}{i} + \frac{1}{o} = \frac{1}{f}$$
 - **색수차 (Chromatic Aberration):** 빛의 파장(색상)에 따라 굴절률이 달라 색상이 번지는 현상.
 
 
-![](색수차.png)
-![](색수차2.png)
+![](../img/색수차.png)
+![](../img/색수차2.png)
 
 
 
 - **비네팅 (Vignetting):** 다중 렌즈 가림 등으로 인해 외곽부 빛이 차단되어 이미지 주변부가 어두워지는 현상.
 
-![](비네팅2.png)
+![](../img/비네팅2.png)
 
 
-![](비네팅.png)
+![](../img/비네팅.png)
 
 
 - **렌즈 왜곡 (Lens Distortion):**
 
     - **방사 왜곡 (Radial Distortion):** 광학 축에서의 거리에 따라 배율이 변함 (배 모양의 **Barrel distortion**, 핀쿠션 모양의 **Pincushion distortion**).
-![](방사왜곡.png)
+![](../img/방사왜곡.png)
  
 - **접선 왜곡 (Tangential Distortion):** 렌즈와 센서의 평행이 맞지 않아 발생.
-![](왜곡.png)
+![](../img/왜곡.png)
 
 ### 2). 왜곡의 원인
-![](왜곡원인1.png)
-![](왜곡원인2.png)
+![](../img/왜곡원인1.png)
+![](../img/왜곡원인2.png)
 
 
 ## 3. Perspective Projection (원근 투영 모델)
