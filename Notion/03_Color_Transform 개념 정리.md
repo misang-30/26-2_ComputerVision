@@ -6,36 +6,36 @@
 
 ## 1. Lens Distortion Model
 ### 1). Brown Model
-![](img/BrownDistortion.png)
+![](../img/BrownDistortion.png)
 
 ### 2). Fitzgibbon Model
-![](img/FitzgibbonModel.png)
-![](img/Summary02.png)
+![](../img/FitzgibbonModel.png)
+![](../img/Summary02.png)
 
 ---
 
 ## 2. Color Transform
-![](img/ColorPhysics.png)
+![](../img/ColorPhysics.png)
 
-![](img/ColorTransformDiag.png)
+![](../img/ColorTransformDiag.png)
 ### 1). NRG
 - 평균화 내용. 그래서 light source에 민감하지 않다.
-![](img/NRG.png)
+![](../img/NRG.png)
 ### 2). HSV(HSI, HSL)
 - 같은 계통이다.
-![](img/HSV_RGB.png)
+![](../img/HSV_RGB.png)
 
 ### 3). HSV-RGB 변환식
 
-![](img/HSV_RGB2.png)
-![](img/HSV_RGB3.png)
+![](../img/HSV_RGB2.png)
+![](../img/HSV_RGB3.png)
 
 ### 4). Sepia Tone Transfrom
 - 여기에서 숙제가 나간다.
 - Sepia 색감으로 바꾸는 것.
 
-![](img/Sepia.png)
-![](img/Sepia2.png)
+![](../img/Sepia.png)
+![](../img/Sepia2.png)
 
 
 
