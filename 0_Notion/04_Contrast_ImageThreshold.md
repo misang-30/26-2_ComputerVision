@@ -1,7 +1,7 @@
 ## 1. Color Transform
 - Contrast에 대해 다룬다.
 ### 1). Contrast 개념
-![](Contrast.png)
+![](../img/Contrast.png)
 
 - 대비(Contrast) : 물체나 픽셀 영역을 서로 구분할 수 있게 만들어 주는 휘도(밝기) 및 색상의 차이
 - 마이켈슨 대비(Michelson Contrast) : 가장 밝은 부분과 어두운 부분의 휘도 차이를 기준으로 정밀하게 계산하는 방식
@@ -14,12 +14,12 @@ $$\sqrt{\frac{1}{MN} \sum_{i=0}^{M-1} \sum_{j=0}^{N-1} (I_{ij} - \bar{I})^2}$$
 - $I_{ij}$: $(i, j)$ 위치의 픽셀 밝기 값
 - $\bar{I}$: 이미지 전체 픽셀의 평균 밝기 값
 
-![](Contrast2.png)
+![](../img/Contrast2.png)
 
 
 ### 2). Image Historgram
 - 강도- 픽셀수
-![](Image.png)
+![](../img/Image.png)
 - **이미지 히스토그램의 정의**: 이미지 내부 픽셀들의 **밝기(Intensity) 분포**를 그래프로 표현한 것입니다.
     
 - **가로축 (Horizontal axis)**: 픽셀의 밝기 값(Intensity value)을 나타냅니다. 일반적인 8비트 이미지 기준 범위는 **0~255** (0: 검은색, 255: 흰색)입니다.
@@ -27,8 +27,8 @@ $$\sqrt{\frac{1}{MN} \sum_{i=0}^{M-1} \sum_{j=0}^{N-1} (I_{ij} - \bar{I})^2}$$
 - **세로축 (Vertical axis)**: 해당 밝기 값을 가진 픽셀의 개수(빈도수, frequency)를 나타냅니다.
 
 
-![](ContrastHistogram.png)
-![](ContrastHistogram2.png)
+![](../img/ContrastHistogram.png)
+![](../img/ContrastHistogram2.png)
 
 ``` C++
 // <구현 코드>
@@ -46,7 +46,7 @@ for(int i=0; i<nRow; i++)
 
 ### 3). Contrast Transform (대비 변환)
 - 아래 그래프는 변환식 정도로 보면 될 것.
-![](ContrastTransform.png)
+![](../img/ContrastTransform.png)
 - **휘도 대비 변환(Luminance Contrast Transform)**: 기존 이미지의 밝기 범위를 $[a, b]$에서 원하는 범위 $[a', b']$로 늘리거나 줄여 대비를 조절합니다.
     
 - **선형 방정식 원리**: 기본적인 1차 직선 방정식 $y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1)$을 응용한 변환입니다.
@@ -73,8 +73,8 @@ for(int i=0; i<nRow; i++)
 
 
 - RGB 모든 Band에서 Contrast를 수행한다.
-![](trasContr.png)
-![](ContrastImplement.png)
+![](../img/trasContr.png)
+![](../img/ContrastImplement.png)
 
 ## 2. Image Thresholding (이미지 문턱값 처리,임계값 처리)
 
@@ -88,15 +88,15 @@ for(int i=0; i<nRow; i++)
     $$g(x,y) = \begin{cases} 255 & \text{if } f(x,y) > T \\ 0 & \text{if } f(x,y) \le T \end{cases}$$
     
 - **예시 예제**: 왼쪽의 쌀알 회색조 이미지에서 배경(어두운 영역)과 쌀알(밝은 영역)을 분리하여 오른쪽처럼 명확한 이진 이미지로 추출해 낸 모습을 보여줍니다.
-![](ImageThreshold.png)
+![](../img/ImageThreshold.png)
 
 ### 2). 기본 전제
 - 아래 전제를 만족해야할 때, Object랑 배경이 구분이 될 것이다.
-![](ImageThreshold2.png)
+![](../img/ImageThreshold2.png)
 
 ### 3). 이진 이미지 변환
 - g는 Gray 이미지, b는 Binary 이미지
-![](ImageThreshold3.png)
+![](../img/ImageThreshold3.png)
 **핵심 가정 3가지**
 
 - **두 개의 영역으로 구성**: 대상 이미지는 크게 두 개의 영역(예: 배경과 관심 객체)으로 나뉩니다.
@@ -118,25 +118,25 @@ for(int i=0; i<nRow; i++)
 - 오추 알고리즘? 이런게 있다고 하네( 계곡점을 찾는 알고리즘 느낌이라 보면 된다.)
 
 
-![](HistogramAnalysis.png)
+![](../img/HistogramAnalysis.png)
 
 - 좁은 영역의 높은 피크값.
-![](HistogramAnalysis2.png)
+![](../img/HistogramAnalysis2.png)
 
 
 - 이런 유형에서는 Threshold를 믿을 수 없다.
-![](HistogramAnalysis3.png)
+![](../img/HistogramAnalysis3.png)
 
 
 - Threshold는 peak사이의 골이 가장 적절하다.
-![](HistogramAnalysis4.png)
-![](HistogramAnalysis5.png)
+![](../img/HistogramAnalysis4.png)
+![](../img/HistogramAnalysis5.png)
 
 
 
 ### 5). Optimal Thresholding
 - 최적화 하는 방법론이다.
-![](HistogramAnalysis6.png)
+![](../img/HistogramAnalysis6.png)
 **핵심 개념 요약**
 
 - **판단 기준 함수(Criterion Function)의 필요성**: 임계값이 '최적(Optimal)'인지 평가하려면 영역 분리 정도를 측정할 목적 함수 $C(i)$가 필요합니다.
