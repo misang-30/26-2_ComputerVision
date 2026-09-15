@@ -85,7 +85,7 @@ for(int i=0; i<nRow; i++)
     
 - **작동 원리**: 임계값(Threshold, $T$)을 기준으로 픽셀 밝기가 $T$보다 크면 흰색(1 또는 255), $T$ 이하이면 검은색(0)으로 지정합니다.
     
-    $$g(x,y) = \begin{cases} 255 & \text{if } f(x,y) > T \\ 0 & \text{if } f(x,y) \le T \end{cases}$$
+$$g(x,y) = \begin{cases} 255 & \text{if } f(x,y) > T \\ 0 & \text{if } f(x,y) \le T \end{cases}$$
     
 - **예시 예제**: 왼쪽의 쌀알 회색조 이미지에서 배경(어두운 영역)과 쌀알(밝은 영역)을 분리하여 오른쪽처럼 명확한 이진 이미지로 추출해 낸 모습을 보여줍니다.
 ![](../img/ImageThreshold.png)
